@@ -1,0 +1,11 @@
+# 개인 컴퓨터에만 있는 파일 (저장소에 올리지 않는다)
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+.env
+
+# AI 도구가 만드는 로컬 설정
+.claude/
+.cursor/

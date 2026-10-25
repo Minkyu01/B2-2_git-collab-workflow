@@ -1,0 +1,21 @@
+# main 직접 push 없음 증빙 (2026-10-25, 유민규 컴퓨터)
+
+$ git log --first-parent --oneline main
+8b26e79 Merge pull request #14 from Minkyu01/feature/yeomin4242-revert-tmi
+5b50590 Merge pull request #11 from Minkyu01/feature/minkyu01-team-intro
+481c1f4 Merge pull request #10 from Minkyu01/feature/yeomin4242-team-intro
+eade51e Merge pull request #12 from Minkyu01/feature/gpffh20-team-intro
+66c41ec Merge pull request #2 from Minkyu01/feature/gpffh20-contributing-commit-pr
+0a5672d Merge pull request #6 from Minkyu01/feature/yeomin4242-contributing-review
+1ddb5a7 Merge pull request #7 from Minkyu01/feature/minkyu01-contributing-flow
+277534c chore: 저장소 기본 구조, 협업 템플릿, 팀 작업 안내 추가
+
+# main에서 만든 임시 브랜치에서 main으로 직접 push를 시험했다 (거부되어 원격은 바뀌지 않았다)
+$ git switch -c tmp-protect-check origin/main
+$ git commit --allow-empty -m "chore: main 보호 규칙 확인"
+$ git push origin HEAD:main
+remote: error: GH006: Protected branch update failed for refs/heads/main.
+remote: - Changes must be made through a pull request.
+To https://github.com/Minkyu01/B2-2_git-collab-workflow.git
+ ! [remote rejected] HEAD -> main (protected branch hook declined)
+error: failed to push some refs to 'https://github.com/Minkyu01/B2-2_git-collab-workflow.git'

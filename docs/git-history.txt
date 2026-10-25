@@ -1,0 +1,59 @@
+# 2026-10-25 기준 git log 결과. 이 PR(#16)의 병합까지 포함한 최종 그래프는 PR #16 코멘트에 남긴다.
+$ git log --oneline --graph --all
+* 4c6947c docs: 기록 문서 표의 PR 칸과 공통 환경 채움
+* e86a202 docs: Branch Protection 설정 화면과 main 직접 push 거부 증빙 추가
+*   8b26e79 Merge pull request #14 from Minkyu01/feature/yeomin4242-revert-tmi
+|\
+| * 020068b fix: 리뷰 반영 - revert 기록 보완
+| * 4b937ee docs: revert 실습 기록 추가
+| * a983b0c Revert "docs: 자기소개에 TMI 섹션 추가"
+|/
+*   5b50590 Merge pull request #11 from Minkyu01/feature/minkyu01-team-intro
+|\
+| * ae8a944 docs: 충돌 기록 #2 작성
+| *   7bce65a Merge remote-tracking branch 'origin/main' into feature/minkyu01-team-intro
+| |\
+| |/
+|/|
+* |   481c1f4 Merge pull request #10 from Minkyu01/feature/yeomin4242-team-intro
+|\ \
+| * | c4c14f6 fix: 리뷰 반영 - 충돌 기록 재현 순서 보완
+| * | 080008f docs: 충돌 기록 #1 작성
+| * |   bec8bfc Merge remote-tracking branch 'origin/main' into feature/yeomin4242-team-intro
+| |\ \
+| |/ /
+|/| |
+* | |   eade51e Merge pull request #12 from Minkyu01/feature/gpffh20-team-intro
+|\ \ \
+| * | | 5f1956f fix: 리뷰 반영 - stash 기록에 삭제된 브랜치 대신 옮겨 갈 브랜치 안내 추가
+| * | | 46251d5 docs: stash 실습 기록 추가
+| * | | 8fd1d27 docs: 신은영 자기소개 추가
+| | * | 02bf857 docs: README 팀원 표에 소개 링크 추가, 임시 메모 삭제
+| | * | b54138f docs: 자기소개에 TMI 섹션 추가
+| | * | 9518141 docs: 민영재 자기소개 추가
+| |/ /
+|/| |
+| | * 0eac85b docs: 유민규 자기소개 추가, 작성 메모에 링크 규칙 추가
+| |/
+|/|
+* |   66c41ec Merge pull request #2 from Minkyu01/feature/gpffh20-contributing-commit-pr
+|\ \
+| * | 5cac2e4 fix: 리뷰 반영 - PR 본문 규칙에 실습 기록 출력 첨부 기준 추가
+| * | abf8e6d docs: reset 실습 기록 추가
+| * | 489502f docs: CONTRIBUTING 3·4절 작성
+| |/
+* |   0a5672d Merge pull request #6 from Minkyu01/feature/yeomin4242-contributing-review
+|\ \
+| * | 2d7bf8f fix: 리뷰 반영 - 충돌 점검 절차 명확화
+| * | 16eff55 docs: CONTRIBUTING 5·6절 작성
+| |/
+* |   1ddb5a7 Merge pull request #7 from Minkyu01/feature/minkyu01-contributing-flow
+|\ \
+| |/
+|/|
+| * 4d659e9 fix: 리뷰 반영 - amend 기록에 add 단계와 reflog 확인 추가
+| * 4363342 fix: 리뷰 반영 - 강제 push 예외 삭제, team-guide 설명도 맞춤
+| * d89d152 docs: amend 실습 기록 추가
+| * bb633bb docs: CONTRIBUTING 1·2·7절 작성
+|/
+* 277534c chore: 저장소 기본 구조, 협업 템플릿, 팀 작업 안내 추가

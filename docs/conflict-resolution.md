@@ -4,8 +4,8 @@
 
 | # | 종류 | 비자명 기준 | 해결 | 상대 | PR |
 | --- | --- | --- | --- | --- | --- |
-| 1 | 같은 파일의 인접 라인 수정 (`README.md` 팀원 표) | (1) 같은 hunk | 민영재 | 신은영 | |
-| 2 | 삭제 + 수정 (`docs/intro-notes.md`) | (2) 삭제 vs 수정 | 유민규 | 민영재 | |
+| 1 | 같은 파일의 인접 라인 수정 (`README.md` 팀원 표) | (1) 같은 hunk | 민영재 | 신은영 | [#10](https://github.com/Minkyu01/B2-2_git-collab-workflow/pull/10) |
+| 2 | 삭제 + 수정 (`docs/intro-notes.md`) | (2) 삭제 vs 수정 | 유민규 | 민영재 | [#11](https://github.com/Minkyu01/B2-2_git-collab-workflow/pull/11) |
 
 ---
 

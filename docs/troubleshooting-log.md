@@ -4,14 +4,14 @@ Git으로 실수를 바로잡은 과정을 남긴다. 누가 하더라도 같은
 
 | 시나리오 | 수행·기록 | 검토 | 관련 PR |
 | --- | --- | --- | --- |
-| 1. `git commit --amend` | 유민규 | 신은영 | |
-| 2. `git reset --soft HEAD~1` | 신은영 | 민영재 | |
-| 3. `git revert` | 민영재 | 유민규 | |
-| 4. `git stash` / `git stash pop` | 신은영 | 유민규 | |
+| 1. `git commit --amend` | 유민규 | 신은영 | [#7](https://github.com/Minkyu01/B2-2_git-collab-workflow/pull/7) |
+| 2. `git reset --soft HEAD~1` | 신은영 | 민영재 | [#2](https://github.com/Minkyu01/B2-2_git-collab-workflow/pull/2) |
+| 3. `git revert` | 민영재 | 유민규 | [#14](https://github.com/Minkyu01/B2-2_git-collab-workflow/pull/14) |
+| 4. `git stash` / `git stash pop` | 신은영 | 유민규 | [#12](https://github.com/Minkyu01/B2-2_git-collab-workflow/pull/12) |
 
 검토 = 그 PR의 리뷰어가 기록대로 다시 해 보고 확인한다.
 
-공통 환경: (작성 예정 — `git --version`, OS)
+공통 환경: Git 2.54.0 (Apple Git-157), macOS (유민규 컴퓨터 기준). 검토자가 임시 저장소에서 기록대로 다시 해 본 결과도 같았다 (amend는 신은영, stash와 revert는 유민규).
 
 ---
 

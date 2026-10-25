@@ -54,6 +54,7 @@ git log --oneline origin/main..HEAD
 - 본문: `.github/pull_request_template.md`의 칸을 비워 두지 않는다.
   - 연결 이슈: `Closes #<이슈 번호>` — 병합되면 이슈가 자동으로 닫힌다.
   - What(변경 사항), Why(변경 이유), How(테스트/검증)
+  - 실습·충돌 기록이 들어간 PR은 기록에 실제로 친 명령과 전·후 출력을 그대로 붙이고, How에 리뷰어가 따라 해 볼 확인 명령을 적는다.
   - 리뷰어에게: 특히 봐 줬으면 하는 파일·줄
 - 리뷰어: 5절 리뷰 순번표대로 지정한다 (`gh pr create --reviewer <아이디>`).
 - 병합 조건 (모두 충족해야 한다):

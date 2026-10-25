@@ -96,6 +96,8 @@ Saved working directory and index state On feature/gpffh20-team-intro: PR2 자�
 $ git stash list
 stash@{0}: On feature/gpffh20-team-intro: PR2 자기소개 작성 중
 $ git status --short
+# 다른 브랜치로 옮겨 가서 급한 작업을 한다. 이 브랜치는 PR #2 병합 때 지워졌으니,
+# 다시 해 볼 때는 아무 다른 브랜치(예: main)로 옮겨 가도 같다.
 $ git switch feature/gpffh20-contributing-commit-pr
 Switched to branch 'feature/gpffh20-contributing-commit-pr'
 Your branch is up to date with 'origin/feature/gpffh20-contributing-commit-pr'.

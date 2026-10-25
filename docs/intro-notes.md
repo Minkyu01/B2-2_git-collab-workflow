@@ -5,3 +5,4 @@
 - 소개 파일은 `team/<GitHub 아이디 소문자>.md`
 - 항목은 [team/README.md](../team/README.md)의 형식을 따른다
 - 다 쓰면 README 팀원 표의 "(작성 예정)"을 소개 링크로 바꾼다
+- 링크는 상대 경로로 쓴다

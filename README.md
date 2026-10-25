@@ -7,7 +7,7 @@
 | 이름 | GitHub | 소개 |
 | --- | --- | --- |
 | 유민규 | @Minkyu01 | (작성 예정) |
-| 신은영 | @gpffh20 | (작성 예정) |
+| 신은영 | @gpffh20 | [소개](team/gpffh20.md) |
 | 민영재 | @yeomin4242 | [소개](team/yeomin4242.md) |
 
 ## 폴더

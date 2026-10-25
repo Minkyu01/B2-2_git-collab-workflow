@@ -22,11 +22,50 @@
 
 ## 3. 커밋 메시지 컨벤션
 
-(작성 예정 — 신은영)
+형식은 `<type>: <무엇을>` 한 줄이다. 무엇을 바꿨는지 읽자마자 알 수 있게 쓰고, 이유가 제목에 다 안 들어가면 본문에 한두 줄 적는다.
+
+| type | 쓰는 때 | 예 |
+| --- | --- | --- |
+| `feat` | 새 기능·새 내용 추가 | `feat: 팀원 표에 소개 링크 열 추가` |
+| `fix` | 잘못된 것 바로잡기, 리뷰 반영 | `fix: 리뷰 반영 - PR 병합 조건에 충돌 없음 추가` |
+| `docs` | 문서 작성·수정 | `docs: CONTRIBUTING 3·4절 작성` |
+| `refactor` | 내용은 그대로 두고 구조만 정리 | `refactor: CONTRIBUTING 표 열 순서 정리` |
+| `test` | 검증용 파일·절차 추가 | `test: 링크 확인 절차 추가` |
+| `chore` | 설정·템플릿 같은 잡무 | `chore: .gitignore에 .idea 추가` |
+
+금지 기준 두 가지:
+
+1. 대상을 알 수 없는 단어만 있는 메시지: `update`, `fix`, `temp`, `wip`, `final`, `docs: update`
+2. 무엇을·왜 바꿨는지 없는 메시지: `bug fix`, `edit file`, `수정`
+
+주의할 점:
+
+- GitHub 웹에서 파일을 고치면 기본 메시지가 `Update README.md`로 채워진다. 그대로 커밋하지 말고 규칙에 맞게 고쳐 쓴다.
+- Git이 만드는 병합 커밋(`Merge …`)과 revert 커밋(`Revert "…"`)의 기본 메시지는 그대로 둔다. 무엇을 합치고 되돌렸는지가 이미 들어 있다.
+- push 전에 내 커밋 메시지를 한 번 확인한다. push 전이라면 `git commit --amend`로 고칠 수 있다 (7절).
+
+```bash
+git log --oneline origin/main..HEAD
+```
 
 ## 4. PR 규칙
 
-(작성 예정 — 신은영)
+- 제목: 커밋 메시지와 같은 `<type>: <무엇을>` 형식. 예: `docs: CONTRIBUTING 3·4절 작성`
+- 본문: `.github/pull_request_template.md`의 칸을 비워 두지 않는다.
+  - 연결 이슈: `Closes #<이슈 번호>` — 병합되면 이슈가 자동으로 닫힌다.
+  - What(변경 사항), Why(변경 이유), How(테스트/검증)
+  - 리뷰어에게: 특히 봐 줬으면 하는 파일·줄
+- 리뷰어: 5절 리뷰 순번표대로 지정한다 (`gh pr create --reviewer <아이디>`).
+- 병합 조건 (모두 충족해야 한다):
+  1. 승인(Approve) 1명 이상
+  2. 모든 리뷰 코멘트에 답글이 달려 있다
+  3. `main`과 충돌이 없다 (있으면 6절대로 내 브랜치에서 푼다)
+  4. 팀 차례표의 병합 순서를 지킨다
+- 병합은 PR 작성자가 merge commit으로 한다. 저장소는 merge commit만 허용한다.
+  ```bash
+  gh pr merge <번호> --merge --delete-branch
+  ```
+- 1인당 최소 기준: PR 생성·병합 2개, 다른 사람 PR 리뷰 2개, 내 PR에서 리뷰 반영 1회 이상.
 
 ## 5. 코드 리뷰 규칙
 

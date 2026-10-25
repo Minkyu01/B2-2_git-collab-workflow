@@ -125,18 +125,35 @@ $ git log --oneline -2
 - 민영재 (수행·기록), 유민규 (검토)
 
 ### 상황
-- (작성 예정)
+- PR #10에서 팀 소개에 넣어 둔 TMI를 12단계 실습 대상으로 삼았다. PR #10과 유민규 PR #11이 이미 main에 병합되어 TMI 추가 커밋 `b54138f`도 공유 히스토리에 들어 있다.
+- main의 기존 커밋을 지우거나 바꾸지 않고, TMI 추가만 취소하는 새 커밋을 만든다.
 
 ### 시도한 명령/절차
 ```bash
-(작성 예정)
+$ git log --oneline -- team/yeomin4242.md
+b54138f docs: 자기소개에 TMI 섹션 추가
+9518141 docs: 민영재 자기소개 추가
+
+$ git revert --no-edit b54138f
+[feature/yeomin4242-revert-tmi a983b0c] Revert "docs: 자기소개에 TMI 섹션 추가"
+ Date: Sun Oct 25 16:08:19 2026 +0900
+ 1 file changed, 4 deletions(-)
+
+$ git log --oneline -3
+a983b0c Revert "docs: 자기소개에 TMI 섹션 추가"
+5b50590 Merge pull request #11 from Minkyu01/feature/minkyu01-team-intro
+ae8a944 docs: 충돌 기록 #2 작성
+
+$ git log --oneline | grep b54138f
+b54138f docs: 자기소개에 TMI 섹션 추가
 ```
 
 ### 결과
-- (작성 예정)
+- `team/yeomin4242.md`에서 TMI 섹션 네 줄이 제거됐고, revert 커밋 `a983b0c`가 새로 생겼다. 원래 추가 커밋 `b54138f`는 히스토리에 남아 있다.
+- 주의: revert는 이미 공유된 커밋을 지우지 않는다. 팀원은 평소처럼 `git pull`만 하면 새 revert 커밋을 받아오며, 강제 push가 필요 없다.
 
 ### 왜 이 방법을 선택했는가(Why)
-- (작성 예정)
+- TMI를 추가한 커밋은 이미 main에 병합되어 공유됐다. reset으로 그 커밋을 없애면 공유 히스토리를 다시 쓰게 되지만, revert는 반대 변경을 새 커밋으로 추가해 이력을 보존한다.
 
 ---
 

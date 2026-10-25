@@ -143,11 +143,14 @@ $ git log --oneline -3
 a983b0c Revert "docs: 자기소개에 TMI 섹션 추가"
 5b50590 Merge pull request #11 from Minkyu01/feature/minkyu01-team-intro
 ae8a944 docs: 충돌 기록 #2 작성
+
+$ git log --oneline | grep b54138f
+b54138f docs: 자기소개에 TMI 섹션 추가
 ```
 
 ### 결과
 - `team/yeomin4242.md`에서 TMI 섹션 네 줄이 제거됐고, revert 커밋 `a983b0c`가 새로 생겼다. 원래 추가 커밋 `b54138f`는 히스토리에 남아 있다.
-- 주의: revert는 이미 공유된 커밋을 지우지 않는다. 팀원은 feature 브랜치의 PR을 병합하면 기존 main을 그대로 따라갈 수 있다.
+- 주의: revert는 이미 공유된 커밋을 지우지 않는다. 팀원은 평소처럼 `git pull`만 하면 새 revert 커밋을 받아오며, 강제 push가 필요 없다.
 
 ### 왜 이 방법을 선택했는가(Why)
 - TMI를 추가한 커밋은 이미 main에 병합되어 공유됐다. reset으로 그 커밋을 없애면 공유 히스토리를 다시 쓰게 되지만, revert는 반대 변경을 새 커밋으로 추가해 이력을 보존한다.

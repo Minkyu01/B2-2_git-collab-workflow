@@ -75,6 +75,6 @@ git switch -c feature/<GitHub 아이디 소문자>-<주제>
 ## 7. 히스토리를 지키는 규칙
 
 - `main`을 포함해 다른 사람이 받아 간 브랜치의 히스토리는 고쳐 쓰지 않는다 (`reset`, `rebase`, `commit --amend` 후 강제 push 금지).
-- 팀 합의 없이 강제 push나 rebase를 하지 않는다. 합의한 경우에도 `--force` 대신 `--force-with-lease`를 쓰고, 합의한 사실을 팀 채팅에 남긴다.
+- 강제 push(`--force`, `--force-with-lease`)는 하지 않는다. 예외를 두지 않는다. 이미 push한 커밋의 메시지나 내용이 잘못됐으면 고쳐 쓰지 않고, 다음 커밋이나 `git revert`로 바로잡는다.
 - push하기 전의 내 커밋만 고친다: 마지막 커밋 메시지는 `git commit --amend`, 커밋을 다시 나누려면 `git reset --soft HEAD~1`.
 - 이미 push한 커밋을 되돌릴 때는 `git revert`를 쓴다. `main`에 들어간 커밋이면 최신 `main`에서 `feature/<아이디>-revert-<주제>` 브랜치를 만들어 되돌린 뒤 PR로 올린다.

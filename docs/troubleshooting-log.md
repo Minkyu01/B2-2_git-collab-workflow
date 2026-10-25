@@ -15,7 +15,7 @@ Git으로 실수를 바로잡은 과정을 남긴다. 누가 하더라도 같은
 
 - amend: Git 2.54.0 (Apple Git-157), macOS 26.6.2 (유민규)
 - reset·stash: Git 2.52.0, macOS 26.4.1 (신은영)
-- revert: 민영재 컴퓨터 (Git·macOS 버전은 영재가 알려 주면 채운다)
+- revert: Git 2.52.0, macOS 27.0.1 (민영재)
 - 검토자가 임시 저장소에서 기록대로 다시 해 본 결과도 같았다 (amend는 신은영, stash와 revert는 유민규). 해시는 컴퓨터마다 다르다.
 
 ---

@@ -47,9 +47,11 @@ $ sed -n '/^<<<<<<< /,/^>>>>>>> /p' README.md
 
 ```bash
 $ git diff --check
+$ git add README.md
+$ git diff --cached --check
 ```
 
-`HEAD` 쪽의 민영재 링크와 `origin/main` 쪽의 신은영 링크를 모두 남기고 마커를 지웠다. `git diff --check`는 출력을 내지 않았다.
+`HEAD` 쪽의 민영재 링크와 `origin/main` 쪽의 신은영 링크를 모두 남기고 마커를 지웠다. `git diff --check`와 `git diff --cached --check`는 출력을 내지 않았다.
 
 ```bash
 $ git commit --no-edit
@@ -61,7 +63,7 @@ $ git commit --no-edit
 
 ### 배운 점(Learnings)
 - README처럼 인접한 행을 여러 PR이 바꾸면 충돌이 날 수 있다. 양쪽 PR의 의도를 확인하고 두 링크를 함께 남겨야 한다.
-- 충돌 해결 결과를 커밋하기 전에 사용자에게 보여 주고 확인받는다.
+- 커밋하기 전에 충돌 상대에게 정리 결과를 공유하고, 상대가 PR 리뷰에서 자기 줄이 살아 있는지 확인한다.
 
 ---
 
